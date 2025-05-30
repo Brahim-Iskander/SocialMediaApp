@@ -1,8 +1,9 @@
-import { useState } from 'react';
+import { useState } from 'react'; 
 import { toast, Toaster } from 'react-hot-toast';
+import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
-import { set } from 'mongoose';
 export default function Register() {
+    const nav = useNavigate();
     const [formData, setFormData] = useState({
         firstname: '',
         lastname: '',
@@ -66,6 +67,7 @@ export default function Register() {
                 picture: null
             });
             setErrors({});
+            nav("/login");
         } catch (error) {
             console.error('Registration error:', error);
             toast.error('User may already exist.');
@@ -73,7 +75,7 @@ export default function Register() {
     };
 
     return (
-        <form className="ff" onSubmit={senderform}>
+        <form className="ff" onSubmit={senderform} >
             <Toaster />
 
             <div className="col-md-6">
@@ -178,7 +180,7 @@ export default function Register() {
             </div>
 
             <div className="col-12 mt-3">
-                <button type="submit" className="btn btn-primary">Register</button>
+                <button type="submit"   className="btn btn-primary">Register</button>
             </div>
         </form>
     );
