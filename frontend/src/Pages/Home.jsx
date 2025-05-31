@@ -1,5 +1,7 @@
 import { useState,useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import Navbar from "./components/navbar/index.jsx";
+import Userdata from "./components/userdata/index.jsx";
 export default function Home() {
     const nav = useNavigate();
     const [userData, setUserData] = useState({});
@@ -15,11 +17,8 @@ export default function Home() {
     }, []);
     return (
         <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100">
-        <h1 className="text-4xl font-bold mb-6">Welcome to the Home Page</h1>
-        <p className="text-lg text-gray-700 mb-4">This is a simple home page.</p>
-        <a href="/login" className="text-blue-500 hover:underline">
-            Go to Login {userData.email}
-        </a>
+        <Navbar />
+        <Userdata user={userData}/>
         </div>
     );
     
