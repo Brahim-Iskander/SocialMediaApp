@@ -1,0 +1,10 @@
+.sidebarra {
+    margin : 20px 20px 20px 20px;
+    border-radius: 5px;
+}
+
+.sidebarra .sidebarra-item:hover ,.sidebarra .sidebarra-item.active{
+    border-left: 3px solid rgb(42, 181, 236);
+    background-color: rgba(42, 181, 236, 0.1);
+    color: rgb(42, 181, 236);
+}

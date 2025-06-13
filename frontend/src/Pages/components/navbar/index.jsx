@@ -60,15 +60,7 @@ export default function Navbar() {
     <Box sx={{ flexGrow: 1 }} className="fullscreen">
       <AppBar position="static">
         <Toolbar>
-          <IconButton
-            size="large"
-            edge="start"
-            color="inherit"
-            aria-label="open drawer"
-            sx={{ mr: 2 }}
-          >
-            <MenuIcon />
-          </IconButton>
+          
           <Typography
             variant="h6"
             noWrap
@@ -89,7 +81,7 @@ export default function Navbar() {
 
           
           <Stack direction="row" spacing={1}>
-            <Tooltip title="Delete" style={{ marginRight: '10px' ,marginLeft: '10px'}}>
+            <Tooltip title="Create" style={{ marginRight: '10px' ,marginLeft: '10px'}}>
               <IconButton color="inherit" >
               <CreateIcon />
                 Create

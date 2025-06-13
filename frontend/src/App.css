@@ -10,3 +10,8 @@ body {
   background-color: #f4f4f4;
   width: 100wh;
 }
+.test{
+  display: flex;
+  justify-content: center;
+  
+}

@@ -1,0 +1,9 @@
+.stories{
+
+    display: flex;
+    justify-content: center;
+    width: 95%;
+    margin: 10px;
+    overflow: hidden;
+    padding: 10px;
+}
