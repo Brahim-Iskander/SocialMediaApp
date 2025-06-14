@@ -54,7 +54,7 @@ export default function Register() {
         }
 
         try {
-            await axios.post('https://mern-at23.onrender.com/users/signup', formData);
+            await axios.post('http://localhost:3000/users/signup', formData);
             toast.success('Successfully registered!');
             setFormData({
                 firstname: '',
