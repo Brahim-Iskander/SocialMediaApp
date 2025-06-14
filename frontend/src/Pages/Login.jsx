@@ -31,7 +31,7 @@ export default function Login() {
     e.preventDefault();
     if (validateForm()==true) {
     try {
-      const res =await axios.post('http://localhost:3000/users/signin', data);
+      const res =await axios.post('https://socialmediaapp-1-myun.onrender.com/users/signin', data);
       localStorage.setItem('user_data',JSON.stringify(res.data.user));
       localStorage.setItem('token', res.data.token);
       toast.success('Login successful!');
